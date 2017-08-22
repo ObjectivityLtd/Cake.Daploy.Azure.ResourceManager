@@ -1,1 +1,1 @@
-# Cake.Daploy.Azure.ResourceManager
+# Cake.Daploy.Azure.ResourceManager ![Build status](https://ci.appveyor.com/api/projects/status/github/ObjectivityLtd/Cake.Daploy.Azure.ResourceManager?svg=true)

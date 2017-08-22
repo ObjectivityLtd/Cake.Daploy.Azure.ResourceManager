@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Cake.Deploy.Azure.ResourceManager</id>
+        <version>0.1.0</version>
+        <authors>ObjectivityLtd</authors>
+        <licenseUrl>https://github.com/ObjectivityLtd/Cake.Deploy.Azure.ResourceManager/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/ObjectivityLtd/Cake.Deploy.Azure.ResourceManager</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Cake addin to use Azure Resource Manager template.</description>
+        <copyright>Objectivity Bespoke Software Specialists, MIT license</copyright>
+        <dependencies />
+    </metadata>
+</package>
