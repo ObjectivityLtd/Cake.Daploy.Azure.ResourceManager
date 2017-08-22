@@ -6,7 +6,6 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
 
@@ -47,6 +46,18 @@
             this.subscriptionId = subscriptionId;
 
             return this;
+        }
+
+        public void CreateResourceGroup(string name, string location)
+        {
+            var rmc = new ResourceManagementClient(this.credentials)
+            {
+                SubscriptionId = subscriptionId
+            };
+
+            var resourceGroupParameters = new ResourceGroup(location);
+
+            var deploymentResult = rmc.ResourceGroups.CreateOrUpdate(name, resourceGroupParameters);
         }
 
         public AzureTemplateDeployment SetResourceGroupName(string name)
