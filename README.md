@@ -1,0 +1,1 @@
+# Cake.Daploy.Azure.ResourceManager
