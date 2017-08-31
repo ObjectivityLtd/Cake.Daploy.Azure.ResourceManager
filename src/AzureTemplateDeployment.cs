@@ -108,7 +108,7 @@
             return this;
         }
 
-        public void Run()
+        public DeploymentExtended Run()
         {
             var rmc = new ResourceManagementClient(this.credentials);
             rmc.SubscriptionId = this.subscriptionId;
@@ -127,7 +127,9 @@
                 }
             };
 
-            var deploymentResult = rmc.Deployments.CreateOrUpdate(this.resourceGroupName, this.name, deployment);
+            var result =  rmc.Deployments.CreateOrUpdate(this.resourceGroupName, this.name, deployment);
+
+            return result;
         }
     }
 
