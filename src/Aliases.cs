@@ -14,7 +14,7 @@ namespace Cake.Daploy.Azure.ResourceManager
         }
 
         [CakeMethodAlias]
-        public static void CreateBlobContainer(string storageAccountName, string storageAccountKey,
+        public static void CreateBlobContainer(this ICakeContext ctx, string storageAccountName, string storageAccountKey,
             string containerName)
         {
             StorageOperations.CreateBlobContainer(storageAccountName, storageAccountKey, containerName);
