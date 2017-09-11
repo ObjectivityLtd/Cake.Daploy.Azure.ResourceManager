@@ -12,5 +12,12 @@ namespace Cake.Daploy.Azure.ResourceManager
         {
             return new AzureTemplateDeployment(name);
         }
+
+        [CakeMethodAlias]
+        public static void CreateBlobContainer(string storageAccountName, string storageAccountKey,
+            string containerName)
+        {
+            StorageOperations.CreateBlobContainer(storageAccountName, storageAccountKey, containerName);
+        }
     }
 }
