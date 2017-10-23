@@ -1,4 +1,4 @@
-namespace Cake.Daploy.Azure.ResourceManager
+namespace Cake.Deploy.Azure.ResourceManager
 {
     using Cake.Core;
     using Cake.Core.Annotations;

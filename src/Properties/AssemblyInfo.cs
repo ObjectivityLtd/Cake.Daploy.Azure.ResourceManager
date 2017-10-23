@@ -1,16 +1,15 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Cake.Daploy.Azure.ResourceManager")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Cake.Deploy.Azure.ResourceManager")]
+[assembly: AssemblyDescription("Cake addin to use Azure Resource Manager template.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Cake.Daploy.Azure.ResourceManager")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("ObjectivityLtd")]
+[assembly: AssemblyProduct("Cake.Deploy.Azure.ResourceManager")]
+[assembly: AssemblyCopyright("Objectivity Bespoke Software Specialists, MIT license")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

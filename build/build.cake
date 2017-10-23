@@ -44,10 +44,10 @@ Teardown(() =>
 ///////////////////////////////////////////////////////////////////////////////
 
 Task("BuildSolution")
-    .Description("Builds Cake.Daploy.Azure.ResourceManager")
+    .Description("Builds Cake.Deploy.Azure.ResourceManager")
     .Does(() =>
 {
-    var solution = sourceDir + "\\Cake.Daploy.Azure.ResourceManager.sln";
+    var solution = sourceDir + "\\Cake.Deploy.Azure.ResourceManager.sln";
 
     NuGetRestore(solution);
 
@@ -59,24 +59,18 @@ Task("BuildSolution")
 });
 
 Task("NuGet")
+    .IsDependentOn("BuildSolution")
     .Description("Create nuget package")
     .Does(()=>
 {
-    var packagePath = outputDir;
-
-    if(!DirectoryExists(packagePath))
-    {
-        CreateDirectory(packagePath);
-    }
-
-    var nuspecFile = sourceDir + "\\Cake.Deploy.Azure.ResourceManager.nuspec";
+    var projectFile = sourceDir + "\\Cake.Deploy.Azure.ResourceManager.csproj";
 
     var nuGetPackSettings   = new NuGetPackSettings {
-        BasePath        = sourceDir + "\\bin\\Release\\",
-        OutputDirectory = packagePath
+        OutputDirectory = outputDir,
+        Properties = new Dictionary<string,string>{ {"Configuration", configuration} }
     };
 
-    NuGetPack(nuspecFile, nuGetPackSettings);
+    NuGetPack(projectFile, nuGetPackSettings);
 });
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -85,7 +79,6 @@ Task("NuGet")
 
 Task("Default")
     .Description("This is the default task which will be ran if no specific target is passed in.")
-    .IsDependentOn("BuildSolution")
     .IsDependentOn("NuGet");
 
 ///////////////////////////////////////////////////////////////////////////////
