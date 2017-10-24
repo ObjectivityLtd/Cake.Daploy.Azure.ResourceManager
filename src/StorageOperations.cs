@@ -3,9 +3,9 @@ using System.Linq;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-namespace Cake.Daploy.Azure.ResourceManager
+namespace Cake.Deploy.Azure.ResourceManager
 {
-    internal static class StorageOperations
+    public static class StorageOperations
     {
         public static void CreateBlobContainer(string storageAccountName, string storageAccountKey, string containerName)
         {
